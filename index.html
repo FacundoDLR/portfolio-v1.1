@@ -19,27 +19,28 @@
 </head>
 <body>
     <!--==================== HEADER ====================-->
-    <header class="header">
+    <header class="header" id="header">
 
        <nav class="nav container">
-        
+
             <h3 class="nav__logo">Portfolio</h3>
 
-            <div class="nav__menu">
-            <ul class="nav__list grid">
-                <li class="nav__item"><a href="#" class="nav__link active-link"><i class="uil uil-estate nav__icon"></i>Home</a></li>
-                <li class="nav__item"><a href="#" class="nav__link active-link"><i class="uil uil-user nav__icon"></i>About</a></li>
-                <li class="nav__item"><a href="#" class="nav__link active-link"><i class="uil uil-rocket nav__icon"></i>Skills</a></li>
-                <li class="nav__item"><a href="#" class="nav__link active-link"><i class="uil uil-book-alt nav__icon"></i>Education</a></li>
-                <li class="nav__item"><a href="#" class="nav__link active-link"><i class="uil uil-suitcase-alt nav__icon"></i>Portfolio</a></li>
-                <li class="nav__item"><a href="#" class="nav__link active-link"><i class="uil uil-message nav__icon"></i>Contactme</a></li>
-            </ul>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list grid">
+                    <li class="nav__item"><a href="#" class="nav__link active-link"><i class="uil uil-estate nav__icon"></i>Home</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link active-link"><i class="uil uil-user nav__icon"></i>About</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link active-link"><i class="uil uil-rocket nav__icon"></i>Skills</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link active-link"><i class="uil uil-book-alt nav__icon"></i>Education</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link active-link"><i class="uil uil-suitcase-alt nav__icon"></i>Portfolio</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link active-link"><i class="uil uil-message nav__icon"></i>Contactme</a></li>
+                </ul>
+                <i class="uil uil-times nav__close " id="nav-close"></i>
             </div>
 
-            <div>
-                <i class="uil uil-moon change-theme"></i>
+            <div class="nav__btns">
+                <i class="uil uil-moon change-theme" id="theme-toggle"></i>
 
-                <div class="nav__toggle">
+                <div class="nav__toggle" id="nav-toggle">
                     <i class="uil uil-bars"></i>
                 </div>
             </div>
@@ -60,5 +61,7 @@
 
     </footer>
 
+    <!--==================== MAIN JS ====================-->
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>

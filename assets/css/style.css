@@ -111,7 +111,10 @@ img {
   margin-left: var(--mb-1-5);
   margin-right: var(--mb-1-5);
 }
-
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
 .header {
   width: 100%;
   position: fixed;
@@ -144,6 +147,20 @@ img {
 .nav__toggle:hover{
   color: var(--first-color);
 }
+
+@media screen and (max-width: 767px){
+    .nav__menu{
+      position: fixed;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      background-color: var(--body-color);
+      padding: 2rem 1.5rem 4rem;
+      box-shadow: 0 -1px 10px rgb(0 0 0 / 60%);;
+      border-radius: 0 0 1.5rem 1.5rem;
+      transition: .3s;
+    }
+  }
 
 .nav__list{
   grid-template-columns: repeat(3, 1fr);
