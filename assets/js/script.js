@@ -59,3 +59,11 @@ function portfolioItemDetail (portfolioItem) {
     document.querySelector(".portfolio__popup-subtitle span").innerHTML = portfolioItem.querySelector(".work__title").innerHTML;
     document.querySelector(".portfolio__popup-body").innerHTML = portfolioItem.querySelector(".portfolio__item-details").innerHTML;
 }
+
+/*==================== SHOW SCROLL UP ====================*/ 
+function scrollUp(){
+    const scrollUp = document.getElementById('scroll-up');
+    // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
+    if(this.scrollY >= 560) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
+}
+window.addEventListener('scroll', scrollUp)
