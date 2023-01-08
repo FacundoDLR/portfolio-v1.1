@@ -374,6 +374,43 @@ img {
     text-align: center;
 }
 
+/*==================== PROJECTS ====================*/
+.portfolio__container{
+  grid-template-columns: repeat(3, 330px);
+  gap: 1.8rem;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+.portfolio__card{
+  background-color: var(--container-color);
+  padding: 1.25rem;
+  border-radius: .5rem;
+}
+
+.portfolio__item-details{
+  display: none;
+}
+
+.work__img{
+  background-color: #e73c7e;
+  border-radius: .5rem;
+  margin-bottom: var(--mb-1);
+}
+.work__title{
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--mb-0-5);
+}
+.work__button{
+  color: var(--first-color);
+  font-size: var(--small-font-size);
+  display: flex;
+  align-items: center;
+  column-gap: .25rem;
+  cursor: pointer;
+}
+
 /*==================== CONTACT ====================*/
 .contact__container{
     row-gap: 3rem;
