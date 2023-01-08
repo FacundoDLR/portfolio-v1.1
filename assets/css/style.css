@@ -110,6 +110,23 @@ img {
   padding: 2rem 0 4rem;
 }
 
+.section__title {
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+  font-family: var(--second-font);
+}
+
+.section__subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-3);
+}
+
+.section__title, 
+.section__subtitle {
+  text-align: center;
+}
+
 /*==================== LAYOUT ====================*/
 .container {
   max-width: 768px;
@@ -304,7 +321,24 @@ img {
   }
 } 
 
+/*==================== ABOU ====================*/
+.about__img{
+  width: 200px;
+  border-radius: .5rem;
+  justify-self: center;
+  align-self: center;
+}
+.about__description{
+  text-align: center;
+  margin-bottom: var(--mb-2-5);
+}
+.about__buttons{
+  display: flex;
+  justify-content: center;
+}
 
+
+/*==================== BUTTONS ====================*/
 .button{
   display: inline-block;
   background-color: var(--first-color);
@@ -315,6 +349,9 @@ img {
 }
 .button:hover{
   background-color: var(--first-color-alt);
+}
+.button:active{
+    scale: .9;
 }
 .button--flex{
   display: inline-flex;
