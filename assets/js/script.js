@@ -1,3 +1,13 @@
+/*==================== PROGRESS NAV-BAR ====================*/
+const progress = document.querySelector(".articleProgress");
+document.addEventListener("scroll", handleProgress);
+function handleProgress() {
+    const totalScroll = document.documentElement.offsetHeight;
+    const scrolledPosition = document.documentElement.scrollTop;
+    const finalScroll = totalScroll - window.innerHeight -2;
+    const scrollPercent = scrolledPosition / finalScroll;
+    progress.style.transform = `scaleX(${scrollPercent})`
+}
 
 /*==================== MENU SHOW Y HIDDEN ====================*/
 const navMenu = document.getElementById("nav-menu");

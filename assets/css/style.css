@@ -105,9 +105,16 @@ img {
     max-width: 100%;
     height: auto;
 }
+img {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
 /*==================== REUSABLE CSS CLASSES ====================*/
 .section {
-  padding: 2rem 0 4rem;
+  padding: 2.5rem 0 4rem;
 }
 
 .section__title {
@@ -230,6 +237,31 @@ img {
 /* Active link */
 .active-link{
   color: var(--first-color);
+}
+
+/*==================== PROGRESS BAR ====================*/
+
+.progressBarContainer{
+  inset: 0;
+  width: 100%;
+  height: 2px;
+}
+.articleProgress{
+  background-color: var(--first-color);
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .1s ease;
+}
+
+/*========== TOOLTIP ==========*/
+.tippy-box{
+  background-color: transparent;
+}
+.tippy-box[data-theme~='primary']  {
+  background-color: var(--first-color);
+  color: #fff;
+  font-size: var(--normal-font-size);
 }
 
 /*==================== HOME ====================*/
@@ -433,26 +465,28 @@ img {
 }
 .portfolio__popup-inner{
   background-color: var(--container-color);
-  width: 900px;
+  max-width: 900px;
   border-radius: .5rem;
-  padding: 2.5rem;
+  padding: 1.5rem;
   position: relative;
 }
 .portfolio__popup-content{
-  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-columns: repeat(2, 1fr); */
   align-items: center;
   column-gap: 3rem;
 }
 
 .portfolio__popup-close{
   position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
+  top: 0;
+  right: .3rem;
   cursor: pointer;
   font-size: 1.5rem;
   color: crimson;
 }
-
+.pp__thumbnail{
+  max-width: 300px;
+}
 .portfolio__popup-img{
   background-color: #e73c7e;
   border-radius: .5rem;
@@ -585,6 +619,14 @@ img {
     order: 1;
     justify-self: center;
   }
+
+  .portfolio__popup-content{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .portfolio__popup-close{
+    top: 1.5rem;
+    right: 1.5rem;
+  }
   
   .about__container,
   .portfolio__container,
@@ -627,6 +669,9 @@ img {
   }
   .nav__menu{
     margin-left: auto;
+  }
+  .progressBarContainer{
+    position: relative;
   }
 
   .home__container{
@@ -675,14 +720,71 @@ img {
   .skills__logo img{
     width: 80px;
     height: 80px;
+    pointer-events: none;
   }
 }
 
 @media screen and (min-width: 1024px) {
-    .nav{
-      font-size: 1.6rem;
-    }
-    .nav__list .nav__item a{
-      font-size: 1rem;
-    }
+  .nav{
+    font-size: 1.6rem;
+  }
+  .nav__list .nav__item a{
+    font-size: 1rem;
+  }
+
+  .home{
+    height: 100vh;
+  }
+  .home__content {
+    grid-template-columns: max-content 2fr 1fr;
+  }
+  .home__title{
+    text-align: start;
+  }
+  .home__subtitle{
+    font-size: var(--h1-font-size);
+    text-align: start;
+  }
+  .home__img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .image-wrapper{
+    width: 300px;
+    height: 300px;
+  }
+  .home__social{
+    transform: translateX(-6rem);
+  }
+  .home__social-icon {
+    font-size: var(--h2-font-size);
+  }
+
+  .contact__form{
+    width: 460px;
+  }
+  .contact__inputs{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "name email"
+      "project project"
+      "message message"
+      "submit submit";
+  }
+  .contact__content.-name{
+    grid-area: name;
+  }
+  .contact__content.-email{
+    grid-area: email;
+  }
+  .contact__content.-project{
+    grid-area: project;
+  }
+  .contact__content.-message{
+    grid-area: message;
+  }
+  .submit{
+    grid-area: submit;
+  }
 }

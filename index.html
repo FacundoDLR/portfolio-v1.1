@@ -330,6 +330,10 @@
             </div>
         </section>
 
+            <!--==================== SCROLL TOP ====================-->
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="uil uil-arrow-up scrollup__icon"></i>
+        </a>
 
     </main>
     <!--==================== FOOTER ====================-->
@@ -339,5 +343,21 @@
 
     <!--==================== MAIN JS ====================-->
     <script src="./assets/js/script.js"></script>
+
+    <!--==================== TOOLTIPS ====================-->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script>
+        // With the above scripts loaded, you can call `tippy()` with a CSS
+        // selector and a `content` prop:
+        tippy('#perfil-hover', {
+          content: "Hello stranger!👋, my name is Facundo and I am a fontend developer. I'd like to help you with your project. Let's start.",
+          theme: 'primary',
+          arrow: false,
+        });
+        // tippy(targets, {
+        //     theme: 'tomato',
+        // });
+    </script>
 </body>
 </html>
