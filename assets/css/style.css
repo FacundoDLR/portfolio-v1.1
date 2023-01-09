@@ -111,10 +111,11 @@ img {
   -moz-user-select: none;
   -o-user-select: none;
   user-select: none;
+  /* pointer-events: none; */
 }
 /*==================== REUSABLE CSS CLASSES ====================*/
 .section {
-  padding: 2.5rem 0 4rem;
+  padding: 3rem 0 4rem;
 }
 
 .section__title {
@@ -396,6 +397,7 @@ img {
     width: 70px;
     height: 70px;
     transition: all 300ms;
+    pointer-events: none;
 }
 .skills__logo:hover img{
     transform: scale(1.1);
@@ -485,7 +487,7 @@ img {
   color: crimson;
 }
 .pp__thumbnail{
-  max-width: 300px;
+  /* max-width: 300px; */
 }
 .portfolio__popup-img{
   background-color: #e73c7e;
