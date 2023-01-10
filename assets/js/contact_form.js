@@ -27,8 +27,5 @@
                 location.hash = "#close"
             }, 3000)
         })
-
     })
-
-
 })(document)

@@ -315,7 +315,7 @@
 
                 </div>
 
-                <form action="https://formsubmit.co/Facundojofre96@gmail.com" method="POST" class="contact__form grid">
+                <form action="https://formsubmit.co/Facundojofre96@gmail.com" method="POST" target="_blank" class="contact-form contact__form grid">
 
                     <div class="contact__inputs grid">
                         <div class="contact__content -name">
@@ -332,7 +332,7 @@
                         </div>
                         <div class="contact__content -message">
                             <label for="" class="contact__label"><i class="uil uil-edit form-icon"></i>Mensaje</label>
-                            <textarea name="" id="" cols="0" rows="4" class="contact__input" placeholder="Ingresa una descripcion de tu proyecto"></textarea>
+                            <textarea name="comments" id="" cols="0" rows="4" class="contact__input" placeholder="Ingresa una descripcion de tu proyecto" required></textarea>
                         </div>
                         <div class="contact-form-loader none">
                             <?xml version="1.0" encoding="utf-8"?>
@@ -354,7 +354,14 @@
                             <div class="modal-content">
                                 <article class="contact-form-response">
                                     <h3>Mensaje enviado</h3>
-                                    <img src="./assets/img/check-gif.gif" alt="alert-icon">
+                                    <p>Te estare contactando en breve...</p>
+                                    <div class="check-container">
+                                        <div class="check-background">
+                                            <svg viewBox="0 0 65 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7 25L27.3077 44L58.5 7" stroke="white" stroke-width="13" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                    </div>
                                 </article>
                             </div>
                         </article>
