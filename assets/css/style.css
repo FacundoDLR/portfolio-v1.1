@@ -148,6 +148,10 @@ img {
   text-align: center;
 }
 
+.none{
+  display: none;
+}
+
 /*==================== LAYOUT ====================*/
 .container {
   max-width: 768px;
@@ -283,7 +287,7 @@ img {
   background-color: transparent;
 }
 .tippy-box[data-theme~='primary']  {
-  background-color: var(--first-color);
+  background-color: var(--first-color-alt);
   color: #fff;
   font-size: var(--normal-font-size);
 }
@@ -611,6 +615,7 @@ img {
   padding: 1rem;
   border-radius: .5rem;
   font-weight: var(--font-medium);
+  border: none;
 }
 .button:hover{
   background-color: var(--first-color-alt);
