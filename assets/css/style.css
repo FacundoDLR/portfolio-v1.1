@@ -662,6 +662,41 @@ img {
   bottom: 5rem;
 }
 
+/*.******* MODAL *******.*/
+.modal{
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #0000007F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 1s;
+}
+.modal-content{
+  position: relative;
+}
+
+.contact-form-response{
+  padding: 1rem;
+  width: 400px;
+  text-align: center;
+  background-color: #FFF;
+}
+.contact-form-response h3{
+  color: #000;
+  margin-bottom: 1rem;
+}
+.contact-form-response img{
+  width: 80px;
+}
+
+
 /*==================== RESPONSIVE DESIGN ====================*/
 
 @media screen and (min-width: 568px) {
