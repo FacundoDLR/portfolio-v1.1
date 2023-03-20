@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https:change-the//fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,700;1,200;1,300;1,400;1,600&display=swap');
 
 /*==================== VARIABLES CSS ====================*/
@@ -94,7 +94,7 @@ html {
 }
 
 body {
-    font-family: var(--body-font);
+    font-family: var(--body-font) !important;
     font-size: var(--normal-font-size);
     background-color: var(--body-color);
     color: var(--text-color);
@@ -262,6 +262,16 @@ img {
   z-index: 5;
 }
 
+.change-theme{
+  font-size: 1.25rem;
+  color: var(--title-color);
+  margin-right: var(--mb-1);
+  cursor: pointer;
+}
+.change-theme:hover{
+  color: var(--first-color);
+}
+
 /* Active link */
 .active-link{
   color: var(--first-color);
@@ -380,6 +390,44 @@ img {
     background-position: 0% 50%;
   }
 } 
+
+.shapes{
+  display: none;
+}
+.shape{
+  position: absolute;
+}
+.shape.s1{
+  width: 5rem;
+  left: -1%;
+  top: 17%;
+  transform: rotate(23deg);
+}
+.shape.s2{
+  width: 3.5rem;
+  right: 5%;
+  top: 12%;
+}
+.shape.s3{
+  width: 3rem;
+  left: 8%;
+  bottom: 10%;
+}
+.shape.s4{
+  width: 3rem;
+  right: 2%;
+  bottom: 5%;
+}
+.shape.s5{
+  width: 2.5rem;
+  left: 10%;
+  top: 14%;
+}
+.shape.s6{
+  width: 3rem;
+  right: 44%;
+  bottom: 7%;
+}
 
 /*==================== ABOUT ====================*/
 .about__img{
@@ -934,6 +982,9 @@ img {
   }
   .home__social-icon {
     font-size: var(--h2-font-size);
+  }
+  .shapes{
+    display: block;
   }
 
   .contact__form{
