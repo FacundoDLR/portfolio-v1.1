@@ -1,6 +1,10 @@
-@import url("https:change-the//fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,700;1,200;1,300;1,400;1,600&display=swap');
+/*==================== GOOGLE FONTS ====================*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Kalam&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Satisfy&display=swap');
 
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,700;1,200;1,300;1,400;1,600&display=swap');
 /*==================== VARIABLES CSS ====================*/
 :root {
     --header-height: 3rem;
@@ -17,14 +21,14 @@
     --text-color: hsl(var(--hue-color), 8%, 45%);
     --text-color-light: hsl(var(--hue-color), 8%, 65%);
     --input-color: hsl(var(--hue-color), 70%, 96%);
-    --body-color: hsl(var(--hue-color), 60%, 99%);
+    --body-color: hsl(var(--hue-color), 0%, 96%);
     --container-color: rgb(230, 230, 230);
     --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
     --base: hsl(var(--hue), 95%, 50%);
     --complimentary1: hsl(var(--hue-complimentary1), 95%, 50%);
     --complimentary2: hsl(var(--hue-complimentary2), 95%, 50%);
-  
+  color: hsl(0, 0%, 96%);
     /*========== Font and typography ==========*/
     --body-font: 'Poppins', sans-serif;
     --title-font: 'Titillium Web', sans-serif;
@@ -90,7 +94,7 @@ body.dark-theme{
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -128,6 +132,7 @@ img {
 /*==================== REUSABLE CSS CLASSES ====================*/
 .section {
   padding: 3.2rem 0 4rem;
+  min-height: 100dvh;
 }
 
 .section__title {
@@ -520,6 +525,12 @@ img {
   cursor: pointer;
 }
 
+.more__button{
+  display: flex;
+  justify-content: center;
+  margin-top: 1.8rem;
+}
+
 /*===== PORTFOLIO POPUP =====*/
 .portfolio__popup{
   position: fixed;
@@ -653,6 +664,69 @@ img {
 
 .submit{
     text-align: center;
+}
+
+/*==================== FOOTER ====================*/
+
+.footer{
+  padding-top: 2rem;
+}
+.footer__container{
+  row-gap: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer__bg{
+  background-color: var(--first-color-second);
+  padding: 2rem 0;
+}
+.footer__title{
+  font-size: var(--h1-font-size);
+  margin-bottom: var(--mb-0-25);
+}
+.footer__subtitle{
+  font-size: var(--small-font-size);
+}
+.footer__links{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+.footer__link:hover{
+  color: var(--first-color-lighter);
+}
+.footer__socials{
+  text-align: center;
+}
+.footer__social{
+  font-size: 1.25rem;
+  margin-right: var(--mb-1-5);
+}
+.footer__social:hover{
+  color: var(--first-color-lighter);
+}
+.footer__copy{
+  font-size: var(--smaller-font-size);
+  text-align: center;
+  color: var(--text-color-light);
+}
+.footer__title,
+.footer__subtitle,
+.footer__link,
+.footer__social{
+  color: #fff;
+}
+
+.footer__container{
+  grid-template-columns: repeat(3, 1fr);
+}
+.footer__links{
+  flex-direction: row;
+  column-gap: 2rem;
+}
+.footer__socials{
+  justify-self: flex-end;
 }
 
 /*==================== BUTTONS ====================*/
@@ -853,7 +927,8 @@ img {
   
   .about__container,
   .portfolio__container,
-  .contact__container{
+  .contact__container,
+  .footer__container{
     grid-template-columns: repeat(2, 1fr);
   }
 }
